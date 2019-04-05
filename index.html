@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Playlist</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+
+      <form id ="new-playlist-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="song" class="primary">Song</label>
+          <input type="text" id="song" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="band" class="primary">Band</label>
+          <input type="text" id="band" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="style" class="primary">Style</label>
+          <select id="style">
+            <option value="style" disabled selected></option>
+
+            <option value="Rock">Rock</option>
+            <option value="Metal">Metal</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Clasic">Clasic</option>
+
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="save"/>
+    </form>
+
+    <button id="delete-all">Delete All</button>
+
+    <h1>Playlist</h1>
+    <div id="playlist"></div>
+  </body>
+</html>
