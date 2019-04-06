@@ -1,5 +1,24 @@
-body {
+
+nav {background-image: url('background.png');
+  color: white;
+  padding-bottom: 30px;
+  padding-top: 10px;
+
+}
+footer {
   background-image: url('background.png');
   color: white;
-  
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#playlist-wrapper {
+  display:inline-flex;
+}
+.main {
+  background-color: green;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 120px;
+
 };

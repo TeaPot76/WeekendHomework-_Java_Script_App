@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  const createPlaylistItem = function (form) {
+    const createPlaylistItem = function (form) {
     const playlistItem = document.createElement('ul');
     playlistItem.classList.add('playlist-item');
 
@@ -31,11 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
     band.textContent = form.band.value;
     playlistItem.appendChild(band);
 
-    const style = document.createElement('li');
+    const length = document.createElement('li');
+    length.textContent = form.length.value;
+    playlistItem.appendChild(length);
+
+
+    const style = document.createElement('p');
     style.textContent = form.style.value;
     playlistItem.appendChild(style);
+
     return playlistItem;
-  }
+
+
+   }
 
   const handleDeleteAllClick = function (event) {
     const playlist = document.querySelector('#playlist');
