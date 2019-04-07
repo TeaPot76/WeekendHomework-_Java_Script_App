@@ -20,9 +20,9 @@ const handleNewPlaylistFormSubmit = function(evt) {
   playlist.appendChild(playlistItem);
 
   //
-  const playlistTimeItem = createPlaylistTimeItem(event.target);
-  const playlistTime = document.querySelector('#playlist-time');
-  playlistTime.appendChild(playlistTimeItem);
+  createPlaylistTimeItem(event.target);
+  // const playlistTime = document.querySelector('#playlist-time');
+  // playlistTime.appendChild(playlistTimeItem);
 
   event.target.reset();
 }
@@ -67,15 +67,16 @@ const createPlaylistTimeItem = function(form) {
 
   }
 
+document.getElementById('playlist-time').textContent = sum;
 
 
-  const playlistTimeItem = document.createElement('p');
-  playlistTimeItem.classList.add('playlist-item');
-    event.target.reset();
-  const totalTime = document.createElement('p');
-  playlistTimeItem.textContent = sum
-  playlistTimeItem.appendChild(totalTime);
-  return playlistTimeItem;
+  // const playlistTimeItem = document.createElement('p');
+  // playlistTimeItem.classList.add('playlist-item');
+  //   event.target.reset();
+  // const totalTime = document.createElement('p');
+  // playlistTimeItem.textContent = sum
+  // playlistTimeItem.appendChild(totalTime);
+  // return playlistTimeItem;
 }
 
 
