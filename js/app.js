@@ -3,14 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const newPlaylistform = document.querySelector('#new-playlist-form');
   newPlaylistform.addEventListener('submit', handleNewPlaylistFormSubmit);
 
-  // const newPlaylistform = document.querySelector('#new-playlist-form');
-  // newPlaylistform.addEventListener('submit', handleNewPlaylistFormSubmit);
-
+  const radioButton = document.querySelector('#myRadio');
+  radioButton.addEventListener('click', handleColorOnClick);
 
   const deleteAllButton = document.querySelector('#delete-all');
   deleteAllButton.addEventListener('click', handleDeleteAllClick);
 });
 
+
+function newButton() {
+  let button = document.createElement("INPUT");
+  button.setAttribute("type", "radio");
+  document.body.appendChild(button);
+}
 
 const handleNewPlaylistFormSubmit = function(evt) {
   evt.preventDefault();
@@ -46,7 +51,7 @@ const createPlaylistItem = function(form) {
   playlistItem.appendChild(length);
 
 
-  const style = document.createElement('p');
+  const style = document.createElement('li');
   style.textContent = form.style.value;
   playlistItem.appendChild(style);
 
@@ -56,16 +61,15 @@ const createPlaylistItem = function(form) {
 
 const createPlaylistTimeItem = function(form) {
 
-  var i;
-  var sum = 0; // initialize the sum
+  let i;
+  let sum = 0; // initialize the sum
   let p = document.getElementsByClassName('song-length');
   for (i = 0; i < p.length; i++) {
     if (!isNaN(Number(p[i].innerHTML))) {
       sum = Number(sum + Number(p[i].innerHTML));
-      // p[i].innerHTML gives you the value
+      // p[i].innerHTML gives the value
     }
-
-  }
+}
 
 document.getElementById('playlist-time').textContent = sum;
 
@@ -80,26 +84,25 @@ document.getElementById('playlist-time').textContent = sum;
 }
 
 
-//
-//  let playlistLength = (input) => {
-//  let result = input.map((length) =>
-//  {  return lengths;
-//  });
-// return time = lengths.reduce((sum, length)=>
-//  { return sum+=length });
-//   return time;
-//
-//  }
+function myFunction() {
+  let radioButton = document.getElementById("#myRadio");
+  radioButton.checked = true;
 
-
-// }
-
-
+}
 
 
 const handleDeleteAllClick = function(event) {
   const playlist = document.querySelector('#playlist');
   playlist.innerHTML = '';
+}
+
+const handleColorOnClick =
+
+function myFunction() {
+  let radioButton = document.getElementById("#myRadio");
+  radioButton.checked = true;
+  const color = document.querySelector('main')
+  color.innerHTML = "blue";
 }
 
 // handleNewPlaylistSubmit.textContent = `Song:
